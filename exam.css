@@ -1,3 +1,6 @@
+body, html {
+  overflow-x: hidden; /* Disable horizontal scrolling */
+}
 /* Menu starts */
 .menu {
   height: 125px;
@@ -86,6 +89,11 @@
   margin-top: 12px;
   font-size: 16px;
   margin-right: 40px;
+  position: relative;
+}
+
+.category ul li:hover {
+  cursor: pointer;
 }
 
 @media (max-width: 1200px) {
@@ -130,3 +138,61 @@
   }
 }
 /* Category ends */
+
+/* Banner starts */
+.banner {
+  background-color: #dff1f1;
+  align-items: center;
+}
+
+.banner .content {
+  margin-left: 310px;
+  margin-right: 180px;
+}
+
+.banner .content hr {
+  border: 1px solid #000 !important;
+  width: 30px;
+  opacity: 1;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.banner h1 {
+  font-weight: bold;
+}
+
+.banner .content p {
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.banner .content button {
+  margin: 0 auto;
+  display: block;
+  height: 50px;
+  width: 200px;
+  background-color: #000;
+  color: white;
+  font-weight: bold;
+}
+
+@media (max-width: 1200px) {
+  .banner .content {
+    margin-left: 110px;
+    margin-right: 100px;
+  }
+}
+
+@media (max-width: 992px) {
+  .banner .image {
+    display: none;
+  }
+
+  .banner .content {
+    padding: 30px 0;
+  }
+}
+
+
+/* Banner ends */
