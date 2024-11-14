@@ -1,40 +1,32 @@
-let swiper;
+let bannerSwiper;
 
-function initSwiper() {
-    const swiperContainer = document.querySelector('.swiper-container');
-    const swiperWrapper = document.querySelector('.swiper-wrapper');
+function initSwipers() {
+    const body = document.body;
 
-    if (window.innerWidth >= 992) {
-        // Initialize Swiper if not already initialized
-        if (!swiper) {
-            swiper = new Swiper('.swiper-container', {
-                loop: true,
-                autoplay: {
-                    delay: 3000,
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-            });
-            swiperContainer.classList.add('swiper-initialized'); // Optional, for custom styling
-        }
-    } else {
-        // Destroy Swiper if initialized
-        if (swiper) {
-            swiper.destroy(true, true); // Destroy Swiper and clean DOM
-            swiper = null; // Reset swiper instance
-
-            // Manually remove Swiper-related classes and styles to prevent display issues
-            swiperContainer.classList.remove('swiper-initialized');
-            swiperContainer.classList.remove('swiper-container-initialized');
-            swiperWrapper.removeAttribute('style');
-        }
+    // Initialize the banner swiper
+    if (window.innerWidth >= 992 && !bannerSwiper) {
+        bannerSwiper = new Swiper('.swiper-container-banner', {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination-banner',
+                clickable: true,
+            },
+            navigation: false,
+        });
+        body.style.overflowX = 'hidden';
+    } else if (window.innerWidth < 992 && bannerSwiper) {
+        bannerSwiper.destroy(true, true);
+        bannerSwiper = null;
+        body.style.overflowX = 'auto';
     }
 }
 
-// Initialize Swiper on page load
-initSwiper();
+// Initialize Swipers on page load
+initSwipers();
 
 // Re-run the function on window resize
-window.addEventListener('resize', initSwiper);
+window.addEventListener('resize', initSwipers);

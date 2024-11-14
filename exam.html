@@ -14,20 +14,28 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- My css -->
     <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="/exam.css">
 </head>
 
 <body>
     <div class="ad-banner">
         <div class="ad-content">
-            <p><i class="fa-solid fa-bolt"></i> SPECIAL OFFER: ENJOY 3 MONTHS OF SHOPIFY FOR<span>  $1/MONTH</span></p>
-            <p><i class="fa-solid fa-bolt"></i> SPECIAL OFFER: ENJOY 3 MONTHS OF SHOPIFY FOR<span>  $1/MONTH</span></p>
-            <p><i class="fa-solid fa-bolt"></i> SPECIAL OFFER: ENJOY 3 MONTHS OF SHOPIFY FOR<span>  $1/MONTH</span></p>
-            <p><i class="fa-solid fa-bolt"></i> SPECIAL OFFER: ENJOY 3 MONTHS OF SHOPIFY FOR<span>  $1/MONTH</span></p>
-            <p><i class="fa-solid fa-bolt"></i> SPECIAL OFFER: ENJOY 3 MONTHS OF SHOPIFY FOR<span>  $1/MONTH</span></p>
+            <p><i class="fa-solid fa-bolt"></i> SPECIAL OFFER: ENJOY 3 MONTHS OF SHOPIFY FOR<span> $1/MONTH</span></p>
+            <p><i class="fa-solid fa-bolt"></i> SPECIAL OFFER: ENJOY 3 MONTHS OF SHOPIFY FOR<span> $1/MONTH</span></p>
+            <p><i class="fa-solid fa-bolt"></i> SPECIAL OFFER: ENJOY 3 MONTHS OF SHOPIFY FOR<span> $1/MONTH</span></p>
+            <p><i class="fa-solid fa-bolt"></i> SPECIAL OFFER: ENJOY 3 MONTHS OF SHOPIFY FOR<span> $1/MONTH</span></p>
+            <p><i class="fa-solid fa-bolt"></i> SPECIAL OFFER: ENJOY 3 MONTHS OF SHOPIFY FOR<span> $1/MONTH</span></p>
         </div>
     </div>
-
 
     <div class="menu">
         <div class="container">
@@ -90,7 +98,7 @@
         </div>
     </div>
 
-    <div class="swiper-container">
+    <div class="swiper-container-banner">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="banner row">
@@ -100,12 +108,9 @@
                             <hr>
                             <p class="text-center">
                                 Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo lacus meleifend menean
-                                diverra
-                                loremous.
+                                diverra loremous.
                             </p>
-                            <button>
-                                SHOP NOW
-                            </button>
+                            <button>SHOP NOW</button>
                         </div>
                     </div>
                     <div class="image col-lg-6">
@@ -113,7 +118,7 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide" id="banner2">
                 <div class="banner row">
                     <div class="col-lg-6 col-md-12">
                         <div class="content">
@@ -121,12 +126,9 @@
                             <hr>
                             <p class="text-center">
                                 Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo lacus meleifend menean
-                                diverra
-                                loremous.
+                                diverra loremous.
                             </p>
-                            <button>
-                                SHOP NOW
-                            </button>
+                            <button>VIEW GALLERY</button>
                         </div>
                     </div>
                     <div class="image col-lg-6">
@@ -242,7 +244,68 @@
         </div>
     </div>
 
+    <div class="social">
+        <div class="container">
+            <h1 class="text-center"><i class="fa-brands fa-instagram"></i>     #ELLA ON INSTAGRAM</h1>
+            <p class="text-center">Phasellus lorem malesuada ligula pulvlnar commodo maecenas</p>
+
+            <div class="owl-carousel owl-theme mt-4">
+                <div class="item">
+                    <img src="/image/social1.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="/image/social2.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="/image/social3.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="/image/social4.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="/image/social5.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center mt-4">
+                <button>SHOP NOW</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load jQuery before initializing Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- Owl Carousel Initialization -->
+    <script>
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                responsiveClass: true,
+                nav: false,          // Disable navigation arrows
+                dots: false,         // Disable pagination dots
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
+            });
+        });
+    </script>
+
+
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
     <script src="/exam.js"></script>
 </body>
 

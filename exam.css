@@ -1,6 +1,5 @@
-body,
-html {
-  overflow-x: hidden; /* Disable horizontal scrolling */
+html, body {
+  overflow-x: hidden;
 }
 
 /* Ad-banner starts */
@@ -209,6 +208,7 @@ html {
 .banner {
   background-color: #dff1f1;
   align-items: center;
+  overflow-x: hidden;
 }
 
 .banner .content {
@@ -264,6 +264,10 @@ html {
 
   .banner .content {
     padding: 30px 0;
+  }
+
+  .banner #banner2 {
+    display: none;
   }
 }
 
@@ -350,3 +354,46 @@ html {
 }
 
 /* Arrival ends */
+
+/* Social starts */
+.social {
+  margin-top: 80px;
+}
+
+.social h1 {
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.social p {
+  font-weight: 500;
+}
+
+.social button {
+  height: 50px;
+  width: 252px;
+  background-color: #000;
+  color: white;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.social button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+@media (max-width: 1200px) {
+  .social button {
+    width: 216px;
+  }
+}
+
+@media (max-width: 992px) {
+  .social button {
+    width: 166px;
+  }
+}
+
+/* Social ends */
