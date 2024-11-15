@@ -1,5 +1,12 @@
-html, body {
+html,
+body {
   overflow-x: hidden;
+}
+
+@media (max-width: 992px) {
+  html, body {
+    overflow-x: hidden;
+  }
 }
 
 /* Ad-banner starts */
@@ -34,13 +41,12 @@ html, body {
 
 @keyframes scroll {
   from {
-      transform: translateX(0);
+    transform: translateX(0);
   }
   to {
-      transform: translateX(-50%);
+    transform: translateX(-50%);
   }
 }
-
 
 /* Ad-banner ends */
 
@@ -93,6 +99,36 @@ html, body {
 .menuContent #button2 {
   width: 140px;
   margin-right: 20px;
+}
+
+@media (max-width: 992px) {
+  .menuContent img {
+    height: 40px;
+    width: 100px;
+    margin-top: 20px;
+  }
+
+  .menuContent .title {
+    display: none !important;
+  }
+
+  .menuContent ul {
+    padding-left: 0 !important;
+  }
+
+  .menuContent i {
+    display: none;
+  }
+
+  .menuContent #button1 {
+    width: 160px;
+    margin-right: 10px;
+  }
+  
+  .menuContent #button2 {
+    width: 120px;
+    margin-right: 10px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -205,10 +241,16 @@ html, body {
 /* Category ends */
 
 /* Banner starts */
+.swiper-container-banner {
+  width: 100%;
+  padding-right: 0!important;
+
+}
 .banner {
   background-color: #dff1f1;
   align-items: center;
   overflow-x: hidden;
+  padding-right: 0!important;
 }
 
 .banner .content {
@@ -255,6 +297,10 @@ html, body {
     margin-left: 110px;
     margin-right: 100px;
   }
+
+  body {
+    overflow-x: hidden;
+  }
 }
 
 @media (max-width: 992px) {
@@ -266,10 +312,12 @@ html, body {
     padding: 30px 0;
   }
 
-  .banner #banner2 {
+  #banner2 {
     display: none;
   }
 }
+
+
 
 /* Banner ends */
 
@@ -397,3 +445,128 @@ html, body {
 }
 
 /* Social ends */
+
+/* Footer starts */
+.footer {
+  background-color: #242424;
+  margin-top: 60px;
+}
+
+.footer ul {
+  padding-left: 0 !important;
+  margin-top: 25px;
+}
+
+.footer ul li {
+  list-style: none;
+  color: #939393;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.footer ul li:hover {
+  color: white;
+}
+
+.footer h5 {
+  color: white;
+}
+
+.footer .email p {
+  margin-top: 25px;
+}
+
+.footer .email input{
+  height: 50px;
+  border: 1px solid #939393;
+  padding-left: 10px;
+  background-color: #242424;
+  color: #939393;
+}
+
+.footer .email input:focus {
+  outline: none;
+}
+
+.footer .email button {
+  height: 50px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.footer .email button:hover {
+  background-color: #242424;
+  border: 1px solid #939393;
+  color: white;
+}
+
+.footer .icon span {
+  background-color: white;
+  color: #000;
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .icon span:hover {
+  cursor: pointer;
+  background-color: #242424;
+  border: 1px solid white;
+  color: white;
+}
+
+.footer hr {
+  color: #939393;
+}
+
+.footer .copyRight {
+  color: #939393;
+}
+
+.footer .payment img {
+  height: 25px;
+  width: 40px;
+  margin-left: 15px;
+}
+
+@media (max-width: 1200px) {
+  #firstCol, #secondCol, #thirdCol {
+    width: 33%;
+  }
+}
+
+@media (max-width: 992px) {
+  /* Make columns go into one row */
+  #firstCol, #secondCol, #thirdCol {
+    flex: 1; /* Distribute width evenly */
+    width: 100%; /* Ensure they span the entire width in the row */
+    margin-bottom: 15px; /* Add some space between columns */
+  }
+
+  /* Wrap the three columns and email section in a flex container */
+  .d-flex.justify-content-between {
+    flex-wrap: wrap;
+  }
+
+  /* Center the email section */
+  .email {
+    width: 100%; /* Full width for centered alignment */
+    text-align: center; /* Center content in email section */
+    margin-top: 20px; /* Add space between columns and email section */
+  }
+
+  .email .icon {
+    justify-content: center;
+  }
+
+  .payment {
+    display: none;
+  }
+}
+/* Footer ends */
